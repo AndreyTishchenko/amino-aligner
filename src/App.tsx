@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SequenceInputForm from "./components/SequenceInputForm";
 import AlignmentDisplay from "./components/AlignmentDisplay";
 import { Container, Typography } from "@mui/material";

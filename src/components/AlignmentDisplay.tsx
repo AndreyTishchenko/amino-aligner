@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { aminoAcidColors } from "../utils/aminoColors";
 import { Snackbar } from "@mui/material";
 
