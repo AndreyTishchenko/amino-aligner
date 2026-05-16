@@ -17,7 +17,7 @@ export default function SequenceInputForm({ onSubmit }: Props) {
 
   const onFormSubmit = (data: FormData) => {
     if (data.sequence1.length !== data.sequence2.length) {
-      alert("Последовательности должны быть одинаковой длины");
+      alert("Sequances must be equal in size");
       return;
     }
     onSubmit(data.sequence1.toUpperCase(), data.sequence2.toUpperCase());
@@ -26,24 +26,24 @@ export default function SequenceInputForm({ onSubmit }: Props) {
   return (
     <Box component="form" onSubmit={handleSubmit(onFormSubmit)} display="flex" flexDirection="column" gap={2}>
       <TextField
-        label="Последовательность 1"
+        label="Sequance 1"
         {...register("sequence1", {
-          required: "Обязательное поле",
-          validate: validateSequence || "Недопустимые символы"
+          required: "Must fill field",
+          validate: validateSequence || "Unavailible symbols"
         })}
         error={!!errors.sequence1}
         helperText={errors.sequence1?.message}
       />
       <TextField
-        label="Последовательность 2"
+        label="sequence 2"
         {...register("sequence2", {
-          required: "Обязательное поле",
-          validate: validateSequence || "Недопустимые символы"
+          required: "Must fill field",
+          validate: validateSequence || "Unavailible characters"
         })}
         error={!!errors.sequence2}
         helperText={errors.sequence2?.message}
       />
-      <Button type="submit" variant="contained">Визуализировать</Button>
+      <Button type="submit" variant="contained">Visualize</Button>
     </Box>
   );
 }
