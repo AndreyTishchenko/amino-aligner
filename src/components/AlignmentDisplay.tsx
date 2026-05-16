@@ -16,7 +16,7 @@ export default function AlignmentDisplay({ seq1, seq2 }: Props) {
     });
   };
 
-  const chunkSize = 30; // или меньше, если хочешь более частый перенос
+  const chunkSize = 30;
 
   const chunkSequence = (seq: string, size: number): string[] => {
     const chunks = [];
@@ -82,7 +82,7 @@ export default function AlignmentDisplay({ seq1, seq2 }: Props) {
       ))}
       <Snackbar
         open={snackOpen}
-        message="Скопировано!"
+        message="Copied!"
         autoHideDuration={1000}
         onClose={() => setSnackOpen(false)}
       />
